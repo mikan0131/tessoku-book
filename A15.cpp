@@ -9,19 +9,15 @@ int B[100009];
 
 int main() {
     cin >> N;
-    for (int i = 1; i <= N; i++) cin >> A[i];
     for (int i = 1; i <= N; i++) {
-        if (count(ans.begin(), ans.end(), A[i]) == false) {
-            ans.push_back(A[i]);
-        }
+        cin >> A[i];
+        ans.push_back(A[i]);
     }
     sort(ans.begin(), ans.end());
+    ans.erase(unique(ans.begin(), ans.end()), ans.end());
     for (int i = 1; i <= N; i++) {
         int pos = lower_bound(ans.begin(), ans.end(), A[i]) - ans.begin() + 1;
-        B[i] = pos;
-    }
-    for (int i = 1; i <= N; i++) {
-        cout << B[i];
+        cout << pos;
         if (i == N) cout << endl;
         else cout << ' ';
     }
