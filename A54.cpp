@@ -14,7 +14,7 @@ int main() {
             string N;
             int S;
             cin >> S >> N;
-            score[N] = S;
+            score[N] = 1;
         }
         if (T == 2) {
             string N;
