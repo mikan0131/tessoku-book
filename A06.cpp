@@ -8,7 +8,7 @@ int main() {
     cin >> N >> Q;
     for (int i = 1; i <= N; i++) cin >> A[i];
     for (int i = 1; i <= Q; i++) cin >> L[i] >> R[i];
-    for (int i = 2; i <= i; i++) {
+    for (int i = 2; i <= N; i++) {
         S[i] = S[i - 1] + A[i];
     }
     for (int i = 1; i <= Q; i++) {
